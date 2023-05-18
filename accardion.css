@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 95%;
+}
+body {
+    background-color: teal;
+
+}
+
+.acardion {
+    background-color: bisque;
+    padding: 40px;
+}
+label h3 {
+    position: relative;
+}
+label h3::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    color: darkviolet;
+}
+label {
+    cursor: pointer;
+    width: 400px;
+    display: block;
+}
+label p {
+    background-color: red;
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+input {
+    display: none;
+}
+input:checked + label p{
+    height: 80px;
+}
+input:checked + label h3::before {
+    content: "-";
+}
